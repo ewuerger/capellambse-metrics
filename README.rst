@@ -20,6 +20,7 @@ Configure which Capella model is to be taken as the basis for your dashboard
 with the `config.yaml` file:
 
 .. code::
+
     # SPDX-FileCopyrightText: Copyright capellambse-metrics contributors
     # SPDX-License-Identifier: Apache-2.0
 
@@ -35,6 +36,7 @@ Then make sure to cd into the `capellambse_metrics` folder before executing
 the following command:
 
 .. code::
+
     streamlit run app.py
 
 The dashboard should then be served on localhost:8501.
