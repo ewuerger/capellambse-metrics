@@ -274,7 +274,6 @@ class Dashboard:
             requirements.by_type  # type: ignore[arg-type]
         )
         num_req_type = len(all_req_types)
-        assert isinstance(earlier_requirements, common.ElementList)
         for col, req_type in zip(st.columns(num_req_type), all_req_types):
             findings = requirements.by_type(req_type)
             label = "UNSET"
@@ -283,6 +282,7 @@ class Dashboard:
 
             args = [label.capitalize(), len(findings)]
             if earlier_requirements:
+                assert isinstance(earlier_requirements, common.ElementList)
                 earlier_findings = earlier_requirements.by_type(req_type)
                 delta = args[-1] - len(  # type:ignore[operator]
                     earlier_findings
