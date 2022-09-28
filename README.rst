@@ -2,8 +2,8 @@
    SPDX-FileCopyrightText: Copyright capellambse-metrics contributors
    SPDX-License-Identifier: Apache-2.0
 
-capellambse_metrics
-===================
+Capellambse Metrics dashboard
+=============================
 
 .. image:: https://github.com/ewuerger/capellambse-metrics/actions/workflows/build-test-publish.yml/badge.svg
   :target: https://github.com/ewuerger/capellambse-metrics/actions/workflows/build-test-publish.yml/badge.svg
