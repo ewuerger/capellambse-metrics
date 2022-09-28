@@ -6,8 +6,10 @@ capellambse_metrics
 ===================
 
 .. image:: https://github.com/ewuerger/capellambse-metrics/actions/workflows/build-test-publish.yml/badge.svg
+  :target: https://github.com/ewuerger/capellambse-metrics/actions/workflows/build-test-publish.yml/badge.svg
 
 .. image:: https://github.com/ewuerger/capellambse-metrics/actions/workflows/lint.yml/badge.svg
+  :target: https://github.com/ewuerger/capellambse-metrics/actions/workflows/lint.yml/badge.svg
 
 A streamlit dashboard for visualizing metrics of capellambse models.
 
