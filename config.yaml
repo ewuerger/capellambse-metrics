@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: Copyright capellambse-metrics contributors
+# SPDX-License-Identifier: Apache-2.0
+
+model:
+  path: PATH_TO_MODEL # for e.g. git+https|ssh://...
+  entrypoint: PATH_TO_AIRD
+  revision: nightly # Optional: Defaults to HEAD in capellambse
+
+earlier_model_revision: BL0-Release # Optional for deltas in metrics
+# branch names and tags are allowed here

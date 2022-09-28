@@ -1,0 +1,67 @@
+/*
+ * SPDX-FileCopyrightText: Copyright capellambse-metrics contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+header :nth-child(2) {
+    visibility: hidden;
+}
+
+header {
+    height: 0.125rem !important;
+}
+
+.css-renyox,
+.css-uzfz7i {
+    top: 0.85rem !important;
+}
+
+#navbarNav {
+    transform: translateY(-100%);
+    transition: transform .5s cubic-bezier(.4, 0, .2, 1);
+}
+
+.navbar-brand {
+    margin-left: 3rem;
+}
+
+#nav-container:hover #navbarNav {
+    transform: translateY(0);
+}
+
+.block-container {
+    padding-top: 1rem !important;
+}
+
+footer {
+    visibility: hidden;
+}
+
+hr {
+    margin: 2rem 0px;
+}
+
+/* sidebar */
+
+hr {
+    background-color: #05d0b9;
+}
+
+.css-1vencpc h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+/* main/dashboard area */
+
+.main h1,
+h2,
+h3 {
+    padding: 1rem 0px;
+    margin-bottom: .5rem;
+}

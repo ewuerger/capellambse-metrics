@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: Copyright capellambse-metrics contributors
+# SPDX-License-Identifier: Apache-2.0
+
+[theme]
+base="dark"
+primaryColor="#05d0b9"
