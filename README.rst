@@ -11,6 +11,8 @@ capellambse_metrics
 .. image:: https://github.com/ewuerger/capellambse-metrics/actions/workflows/lint.yml/badge.svg
   :target: https://github.com/ewuerger/capellambse-metrics/actions/workflows/lint.yml/badge.svg
 
+.. image:: docs/source/_static/dashboard_test.png
+
 A streamlit dashboard for visualizing metrics of capellambse models.
 
 Running
