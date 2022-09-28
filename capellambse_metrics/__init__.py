@@ -76,7 +76,7 @@ class Dashboard:
     def __init__(
         self,
         model: capellambse.MelodyModel,
-        earlier_model: capellambse.MelodyModel = None,
+        earlier_model: capellambse.MelodyModel | None = None,
         title: str = "",
     ) -> None:
         self.title = title or f"{model.name} Metrics"
@@ -132,7 +132,11 @@ class Dashboard:
     def render_main_page(self) -> None:
         st.title(self.title)
         if self.earlier_model is not None:
+            assert self.model.info.branch is not None
+            assert self.model.info.rev_hash is not None
             now = self.model.info.branch + f" ({self.model.info.rev_hash[:7]})"
+            assert self.earlier_model.info.branch is not None
+            assert self.earlier_model.info.rev_hash is not None
             then = (
                 self.earlier_model.info.branch
                 + f" ({self.earlier_model.info.rev_hash[:7]})"
@@ -167,7 +171,9 @@ class Dashboard:
             )
 
             for obj_name in selected_objs:
-                self.render_topic_section(layer, obj_name, layer_info)  # type: ignore[arg-type]
+                self.render_topic_section(
+                    layer, obj_name, layer_info  # type: ignore[arg-type]
+                )
 
             st.markdown("---")
 
@@ -253,7 +259,7 @@ class Dashboard:
     ) -> None:
         requirement_types = self.model.search("RequirementType", below=layer)
         requirements = self.model.search("Requirement", below=layer)
-        earlier_requirements: common.ElementList = []
+        earlier_requirements: common.ElementList | list = []
         if earlier_layer is not None:
             assert self.earlier_model is not None
             earlier_requirements = self.earlier_model.search(
@@ -264,8 +270,11 @@ class Dashboard:
             return
 
         st.subheader("Requirements")
-        all_req_types = set(requirement_types) | set(requirements.by_type)
+        all_req_types = set(requirement_types) | set(
+            requirements.by_type  # type: ignore[arg-type]
+        )
         num_req_type = len(all_req_types)
+        assert isinstance(earlier_requirements, common.ElementList)
         for col, req_type in zip(st.columns(num_req_type), all_req_types):
             findings = requirements.by_type(req_type)
             label = "UNSET"
@@ -306,7 +315,9 @@ class Dashboard:
         st.metric("Total", len(findings))
         # XXX: Need to pass list of UUIDs since ElementList isn't hashable
         data = get_topic_data([obj.uuid for obj in findings], self.model)
-        self.chart_type_map[self.selected_chart_type](pd.DataFrame(data))  # type: ignore[operator]
+        self.chart_type_map[  # type: ignore[operator]
+            self.selected_chart_type
+        ](pd.DataFrame(data))
 
     def render_topic_bar_chart(self, df: pd.DataFrame) -> None:
         fig = px.bar(
