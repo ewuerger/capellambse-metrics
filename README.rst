@@ -5,15 +5,17 @@
 Capellambse Metrics dashboard
 =============================
 
+.. image:: docs/source/_static/dashboard_test.png
+
 .. image:: https://github.com/ewuerger/capellambse-metrics/actions/workflows/build-test-publish.yml/badge.svg
   :target: https://github.com/ewuerger/capellambse-metrics/actions/workflows/build-test-publish.yml/badge.svg
 
 .. image:: https://github.com/ewuerger/capellambse-metrics/actions/workflows/lint.yml/badge.svg
   :target: https://github.com/ewuerger/capellambse-metrics/actions/workflows/lint.yml/badge.svg
 
-.. image:: docs/source/_static/dashboard_test.png
+A streamlit dashboard for visualizing metrics of capellambse__ models.
 
-A streamlit dashboard for visualizing metrics of capellambse models.
+__ https://github.com/DSD-DBS/py-capellambse#python-capellambse
 
 Running
 -------
